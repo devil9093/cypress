@@ -4,7 +4,7 @@ describe('my first step',() =>{
     })
     it('test 2',function(){
         cy.visit('www.facebook.com')
-        cy.title().should('eq','facebook')
+        cy.title().should('eq','Facebook - लॉग इन किंवा साइन अप')
     })
 
 })

@@ -8,8 +8,8 @@ describe('locator',() =>{
     })
     it('Xpath',() =>{
         cy.visit('www.amazon.in');
-        cy.xpath('').type('shirt');
-        cy.xpath('').click().end();
+        cy.xpath('//*[@id="twotabsearchtextbox"]').type('shirt');
+        cy.xpath('//*[@id="nav-search-submit-button"]').click().end();
         //cy.get('nav-logo-sprites').contains('amazon').end();
     })
 
