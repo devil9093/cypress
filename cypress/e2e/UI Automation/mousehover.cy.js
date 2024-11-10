@@ -30,7 +30,7 @@ describe('mouse actions',()=>{
 
    })
 
-   it.only('scrolling page',()=>{
+   it('scrolling page',()=>{
     
     cy.visit('https://www.countries-ofthe-world.com/flags-of-the-world.html')
     //india flag
