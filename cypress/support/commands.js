@@ -26,3 +26,9 @@
 
 /// <reference types ="Cypress"/>
 /// <reference types ="cypress-xpath"/>
+Cypress.Commands.add('getIframe',(locator)=>{
+    return cy.get(locator)
+    .its('0.contentDocument.body')
+    .should('be.visible')
+    .then(cy.wrap);
+})
