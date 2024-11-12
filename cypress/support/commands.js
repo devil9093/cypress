@@ -32,3 +32,9 @@ Cypress.Commands.add('getIframe',(locator)=>{
     .should('be.visible')
     .then(cy.wrap);
 })
+Cypress.Commands.add('rightClickAction',(locator)=>{
+    return cy.get(locator).rightclick()
+})
+Cypress.Commands.add('doubleClickAction',(locator)=>{
+    return cy.get(locator).dblclick()
+})

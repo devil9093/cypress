@@ -12,10 +12,11 @@ describe('interaction with UI', ()=>{
    cy.get('#select2-billing_country-container').should('be.visible')
    cy.get('#select2-billing_country-container').click();
    cy.get('.select2-search__field').type('Iran').type('{enter}')
+   cy.wait(2000)
    cy.get('.select2-search__field').should('have.text', 'Iran')
 })
 
-it.only('dropdown for auto suggest', () =>{
+it('dropdown for auto suggest', () =>{
    cy.visit("https://www.wikipedia.org/")
    cy.get('#searchInput').should('be.visible')
    cy.get('#searchInput').type('Pune');

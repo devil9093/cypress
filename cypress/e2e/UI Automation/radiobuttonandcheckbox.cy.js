@@ -10,7 +10,7 @@ describe('interaction with UI', ()=>{
 
  })
 
- it('radiobutton', () =>{
+ it('checkbox', () =>{
     cy.visit("https://testautomationpractice.blogspot.com/")
     cy.get('#sunday').should('be.visible')
     //check and uncheck sunday check box

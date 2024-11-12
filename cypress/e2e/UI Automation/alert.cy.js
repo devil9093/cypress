@@ -34,7 +34,7 @@ describe('handling alert', () =>{
         cy.get('#result').should('have.text', 'You clicked: Cancel')
     })
 
-    it.only('javascript prompt alert for - ok & cancel', () => {
+    it('javascript prompt alert for - ok & cancel', () => {
 
         cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
         cy.window().then((text) =>{
