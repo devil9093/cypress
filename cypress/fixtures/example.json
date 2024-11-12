@@ -6,5 +6,18 @@
 {
   "name": "demo",
   "pass": "demo123"
+},
+{
+  "title": "foo",
+  "body": "bar",
+  "userId": 1
+},
+{
+  "title": "updatedTitle",
+  "body": "updateBar",
+  "userId": 1
+},
+{
+  "title": "PatchTitle"
 }
 ]
