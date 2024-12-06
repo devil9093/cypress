@@ -33,8 +33,15 @@ Cypress.Commands.add('getIframe',(locator)=>{
     .then(cy.wrap);
 })
 Cypress.Commands.add('rightClickAction',(locator)=>{
-    return cy.get(locator).rightclick()
+        return cy.get(locator).rightclick()
 })
 Cypress.Commands.add('doubleClickAction',(locator)=>{
     return cy.get(locator).dblclick()
+})
+Cypress.Commands.add('ClickAction',(locator)=>{
+    if(locator.startsWith('//')||locator.startsWith('.//')){
+        return cy.xpath(locator).click()
+    }else{
+        return cy.get(locator).click()
+    }
 })
