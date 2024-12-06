@@ -1,6 +1,12 @@
 describe('assertions',() =>{
-    it('Implicit assertion',() =>{
+    it.only('Implicit assertion',() =>{
+       
+        cy.intercept('GET','https://opensource-demo.orangehrmlive.com/web/index.php/core/i18n/messages').as('loadhomepage')
+       
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+        //dynamic wait using alias
+        cy.wait('@loadhomepage')
+        
         //multiple assertion with should & and
         cy.url().should('include', 'orangehrmlive')
         .should('eq', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -19,6 +25,7 @@ describe('assertions',() =>{
         cy.get("[type = 'submit']").should('be.enabled').click()
         //element should be exist on dom
         cy.get('.oxd-userdropdown-tab').should('exist')
+        
     })
     it('Explicit assertions',() =>{
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
